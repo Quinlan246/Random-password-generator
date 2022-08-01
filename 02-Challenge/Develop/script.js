@@ -5,18 +5,30 @@ var uppercaseAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var numbers = "0123456789"
 var specialCharacters = "~`!@#$%^&*()-_=+"
 
+var allOptions = [lowercaseAlphabet, uppercaseAlphabet, numbers, specialCharacters]
+
 
 
 // Write password to the #password input
 function writePassword() {
   
-  var passwordLength = 128; 
+  var lowercaseAlpha = confirm("Would you like to include lowercase letters?");
+  var uppercaseAlpha = confirm("Would you like to include uppercase letters?");
+  var numb = confirm("Would you like to include any numbers?")
+  var specialChara = confirm("Would you like to include any special characters?");
+  var passwordLen = confirm("Please choose between 8 and 128 characters.");
+  var passwordLength = 129; 
+
+
+
+
+  for (var i = 9; i <= passwordLength; i++) {
+    var randomString = Math.floor(Math.random() * )
+  }
+
   var password = "";
   var passwordText = document.querySelector("#password");
 
-  for (var i = 9; i <= passwordLength; i++) { 
-    
-  }
 
   passwordText.value = password;
 
