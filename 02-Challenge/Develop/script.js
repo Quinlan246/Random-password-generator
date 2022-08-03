@@ -4,7 +4,6 @@ var lowercaseAlphabet = "abcdefghijklmnopqrstuvwxyz";
 var uppercaseAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "0123456789";
 var specialCharacters = "~`!@#$%^&*()-_=+";
-var passwordString = "";
 var passwordText = document.querySelector("#password");
 
 // Write password to the #password input
@@ -14,9 +13,18 @@ function writePassword() {
   var uppercaseAlpha = confirm("Would you like to include uppercase letters?");
   var numb = confirm("Would you like to include any numbers?")
   var specialChara = confirm("Would you like to include any special characters?");
-  var passwordLength = (prompt("Please choose between 8 and 128 characters.")); 
+ 
+  while (lowercaseAlpha === false && uppercaseAlpha === false && numb === false && specialChara === false ) {
+    alert ("One character must be used. Please choose one and try again.")
+    var lowercaseAlpha = confirm("Would you like to include lowercase letters?");
+    var uppercaseAlpha = confirm("Would you like to include uppercase letters?");
+    var numb = confirm("Would you like to include any numbers?")
+    var specialChara = confirm("Would you like to include any special characters?");
+  }
+  
+  var passwordLength = (prompt("Please choose between 8 and 128 characters."));
 
-  while(passwordLength <= 9 || passwordLength >= 129) {
+  while (passwordLength <= 9 || passwordLength >= 129) {
     alert("Password length must be between 8 and 128 characters. Please try again")
     var passwordLength = (prompt("Please choose between 8 and 128 characters.")); 
   }
