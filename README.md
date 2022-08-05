@@ -10,6 +10,10 @@
 
 - After all the options were anwsered the password would generate in the window based off the users selections.
 
+<img width="1505" alt="Screen Shot 2022-08-04 at 10 22 09 PM" src="https://user-images.githubusercontent.com/108549782/182995145-7c8731cc-5d3a-4382-bd17-6bf515cd04b0.png">
 
+localStorage.setItem("userInfo", JSON.stringify(userObject))
+
+https://quinlan246.github.io/Random-password-generator/
 
 https://github.com/Quinlan246/Random-password-generator
